@@ -1,5 +1,3 @@
-// app/trade/[coinId]/page.tsx
-
 import BackHomeButton from "@/components/BackHomeButton";
 import { TradeDialog } from "@/components/TradeDialog";
 import { notFound } from "next/navigation";
@@ -27,10 +25,10 @@ async function getCoinData(coinId: string): Promise<CoinData | null> {
 export default async function Page({
   params,
 }: {
-  params: Promise<{ coinId: string }>; // Make params a Promise
+  params: Promise<{ coinId: string }>; 
 }) {
-  const resolvedParams = await params; // Await the params
-  const coin = await getCoinData(resolvedParams.coinId); // Use resolved params
+  const resolvedParams = await params; 
+  const coin = await getCoinData(resolvedParams.coinId); 
   if (!coin) return notFound();
 
 
@@ -39,7 +37,7 @@ export default async function Page({
   return (
     <>
       <BackHomeButton />
-      <main className="max-w-2xl mx-auto px-4 py-10 m-10 rounded-bl-3xl border-x-black border-e-stone-800 rounded-tr-3xl border-x-[4px]">
+      <main className="max-w-2xl md:mx-auto px-4 py-10 m-10 mx-4 rounded-bl-3xl border-x-black border-e-stone-800 rounded-tr-3xl border-x-[4px] ">
         <div className="flex items-center gap-4 mb-6">
           <img src={coin.image.large} alt={coin.name} className="w-12 h-12" />
           <h1 className="text-2xl font-bold">

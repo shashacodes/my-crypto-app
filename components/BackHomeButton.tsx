@@ -8,7 +8,7 @@ export default function BackHomeButton() {
   const router = useRouter();
 
   return (
-    <Button onClick={() => router.push('/')} variant="outline" className="flex items-center gap-2">
+    <Button onClick={() => router.push('/')} variant="outline" className="flex items-center gap-2 m-4">
       <ArrowLeft className="w-4 h-4" />
       Back Home
     </Button>
