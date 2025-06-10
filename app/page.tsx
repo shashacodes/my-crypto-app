@@ -6,7 +6,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import ScrollToTop from '@/components/ScrollToTop';
-import { Skeleton } from '@/components/ui/skeleton';
 import CryptoSkeleton from '@/components/CryptoSkeleton';
 
 type Coin = {
